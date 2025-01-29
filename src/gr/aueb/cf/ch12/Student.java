@@ -1,16 +1,40 @@
 package gr.aueb.cf.ch12;
 
+/**
+ * Data class.
+ * POJO (Plain Old Java Object)
+ * Java Bean.
+ */
 public class Student {
+    private static int studentsCount = 0;
+
     private int id;
     private String firstname;
     private String lastname;
 
-    public Student() {
+    static {
+        studentsCount = 0;
+    }
 
+    // Default Constructor
+    public Student() {
+        studentsCount++;
+    }
+
+    // Overloaded Constructor
+    public Student(int id, String firstname, String lastname) {
+        this.id = id;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        studentsCount++;
+    }
+
+    public static int getStudentsCount() {
+        return studentsCount;
     }
 
     public int getId() {
-        return this.id;
+        return id;
     }
 
     public void setId(int id) {
@@ -18,7 +42,7 @@ public class Student {
     }
 
     public String getFirstname() {
-        return this.firstname;
+        return firstname;
     }
 
     public void setFirstname(String firstname) {
@@ -26,7 +50,7 @@ public class Student {
     }
 
     public String getLastname() {
-        return this.lastname;
+        return lastname;
     }
 
     public void setLastname(String lastname) {

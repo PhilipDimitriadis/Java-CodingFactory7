@@ -21,7 +21,4 @@ public class exersice6 {
         return transformed;
     }
 
-    public static int maxConcurrentCars(int[][] arr) {
-        
-    }
 }

@@ -6,20 +6,20 @@ public class User {
     private String lastname;
     private String username;
     private String password;
-    private boolean isActive;
+    private boolean active;
 
     public User() {
 
     }
 
     public User(int id, String firstname, String lastname, String username,
-                String password, boolean isActive) {
+                String password, boolean active) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
         this.username = username;
         this.password = password;
-        this.isActive = isActive;
+        this.active = active;
     }
 
     public int getId() {
@@ -63,10 +63,10 @@ public class User {
     }
 
     public boolean isActive() {
-        return isActive;
+        return active;
     }
 
     public void setActive(boolean active) {
-        isActive = active;
+        this.active = active;
     }
 }

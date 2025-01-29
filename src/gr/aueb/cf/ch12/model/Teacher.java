@@ -1,7 +1,7 @@
 package gr.aueb.cf.ch12.model;
 
 /**
- * POJO - Java Bean
+ * POJO - Java Bean.
  */
 
 public class Teacher {

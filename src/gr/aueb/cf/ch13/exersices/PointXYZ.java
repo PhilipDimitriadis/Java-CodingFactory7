@@ -39,11 +39,10 @@ public class PointXYZ {
         this.z = z;
     }
 
-    /**
-     * Gets the distance of a 3D point from the origin
-     *
-     * @return      the Euclidean distance of the point to the origin (0, 0, 0)
-     */
+    public String convertToString() {
+        return "(" + x + ", " + y + ", " + z + ")";
+    }
+
     public double getXYZDistance() {
         return Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2) + Math.pow(z, 2));
     }

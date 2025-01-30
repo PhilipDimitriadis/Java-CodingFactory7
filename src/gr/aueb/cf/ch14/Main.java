@@ -1,5 +1,6 @@
 package gr.aueb.cf.ch14;
 
+import gr.aueb.cf.ch14.exersices.Logger;
 import gr.aueb.cf.ch14.model.Point;
 import gr.aueb.cf.ch14.model.Teacher;
 import gr.aueb.cf.ch14.services.CodingFactorySingleton;
@@ -26,4 +27,6 @@ public class Main {
         System.out.println(cf1);
         System.out.println(cf2);
     }
+
+
 }

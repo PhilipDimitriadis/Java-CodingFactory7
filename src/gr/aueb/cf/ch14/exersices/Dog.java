@@ -1,23 +1,23 @@
-package gr.aueb.cf.ch15.exersices;
+package gr.aueb.cf.ch14.exersices;
 
-public class Cat extends Animal {
+public class Dog extends Animal {
 
-    public Cat() {
-
+    public Dog() {
+        super();
     }
 
-    public Cat(String name, int age) {
+    public Dog(String name, int age) {
         super(name, age);
     }
 
     @Override
     public void speak() {
-        System.out.println("I am a cat");
+        System.out.println("I am a dog");
     }
 
     @Override
     public String toString() {
-        return "Cat {" +
+        return "Dog {" +
                 "name='" + getName() + '\'' +
                 ", age=" + getAge() +
                 '}';

@@ -1,6 +1,6 @@
-package gr.aueb.cf.ch15.exersices;
+package gr.aueb.cf.ch14.exersices;
 
-public class Main {
+public class AnimalMain {
 
     public static void main(String[] args) {
         Dog dog = new Dog("Tommy", 4);

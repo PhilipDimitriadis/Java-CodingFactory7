@@ -11,6 +11,10 @@ public class City implements Cloneable {
         this.description = description;
     }
 
+    public City(City city) {
+        this.description = city.getDescription();
+    }
+
     public String getDescription() {
         return description;
     }

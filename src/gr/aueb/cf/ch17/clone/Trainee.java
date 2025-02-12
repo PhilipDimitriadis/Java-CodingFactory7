@@ -13,6 +13,11 @@ public class Trainee implements Cloneable {
         this.city = city;
     }
 
+    public Trainee(Trainee trainee) {
+        this.name = trainee.name;
+        this.city = new City(trainee.getCity());
+    }
+
     public String getName() {
         return name;
     }

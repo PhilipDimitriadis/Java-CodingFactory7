@@ -57,5 +57,6 @@ public class SingleList<T> {
         Node<T> nodeToReturn = n.getNext();
         n.setNext(null);
         return nodeToReturn;
+
     }
 }

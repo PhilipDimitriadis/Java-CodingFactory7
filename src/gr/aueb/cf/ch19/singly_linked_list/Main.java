@@ -17,6 +17,11 @@ public class Main {
         System.out.println(num);
         System.out.println();
 
+        Node<Integer> numNode2 = list.removeFirst();
+        int num2 = numNode2.getItem();
+        System.out.println(num2);
+        System.out.println();
+
         list.traverse();
 
     }

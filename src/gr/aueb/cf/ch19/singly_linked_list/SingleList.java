@@ -3,10 +3,9 @@ package gr.aueb.cf.ch19.singly_linked_list;
 public class SingleList<T> {
     private Node<T> head = null;
 
-
     /**
      * time-complexity O(1)
-     * @param t the value to be inserted
+     * @param t the value to be inserted.
      */
     public void insertFirst(T t) {
         Node<T> tmp = new Node<>();
@@ -16,10 +15,9 @@ public class SingleList<T> {
         head = tmp;
     }
 
-
     /**
-     * Time-complexity O(n)
-     * @param t the value to be inserted
+     * Time complexity O(n)
+     * @param t the value to be inserted.
      */
     public void insertLast(T t) {
         Node<T> tmp = new Node<>();
@@ -33,6 +31,7 @@ public class SingleList<T> {
 
         Node<T> n;
         for (n = head; n.getNext() != null; n = n.getNext()) {
+
         }
         n.setNext(tmp);
     }
@@ -40,7 +39,7 @@ public class SingleList<T> {
 
     /**
      * Time complexity O(1)
-     * @return
+     * @return  the removed node.
      */
     public Node<T> removeFirst() {
         if (isEmpty()) return null;
@@ -50,26 +49,29 @@ public class SingleList<T> {
         return node;
     }
 
+    /**
+     * Time-complexity O(n)
+     * @return the removed node.
+     */
     public Node<T> removeLast() {
         if (isEmpty() || head.getNext() == null) {
             return removeFirst();
         }
 
         Node<T> n;
-        for (n = head; n.getNext().getItem() != null; n = n.getNext()) {
+        for (n = head; n.getNext().getNext() != null; n = n.getNext()) {
         }
 
         Node<T> nodeToReturn = n.getNext();
         n.setNext(null);
         return nodeToReturn;
-
     }
-
 
     /**
      * Time-complexity O(n)
      * @param t the value to search for.
-     * @return the node that contains the value, null otherwise.
+     * @return  the node that contains the value,
+     *          null otherwise.
      */
     public Node<T> get(T t) {
         Node<T> nodeToReturn = null;
@@ -82,7 +84,6 @@ public class SingleList<T> {
         }
         return nodeToReturn;
     }
-
 
     /**
      * Time-complexity O(n)
@@ -103,6 +104,7 @@ public class SingleList<T> {
         for (Node<T> n = head; n != null; n = n.getNext()) {
             counter++;
         }
+
         return counter;
     }
 }

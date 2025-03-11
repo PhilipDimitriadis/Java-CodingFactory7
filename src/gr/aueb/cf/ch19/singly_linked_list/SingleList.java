@@ -16,12 +16,17 @@ public class SingleList<T> {
         head = tmp;
     }
 
+
+    /**
+     * Time-complexity O(n)
+     * @param t the value to be inserted
+     */
     public void insertLast(T t) {
         Node<T> tmp = new Node<>();
         tmp.setItem(t);
         tmp.setNext(null);
 
-        if (head == null) {
+        if (isEmpty()) {
             insertFirst(t);
             return;
         }
@@ -38,7 +43,7 @@ public class SingleList<T> {
      * @return
      */
     public Node<T> removeFirst() {
-        if (head == null) return null;
+        if (isEmpty()) return null;
 
         Node<T> node = head;
         head = head.getNext();
@@ -46,7 +51,7 @@ public class SingleList<T> {
     }
 
     public Node<T> removeLast() {
-        if (head == null || head.getNext() == null) {
+        if (isEmpty() || head.getNext() == null) {
             return removeFirst();
         }
 
@@ -58,5 +63,46 @@ public class SingleList<T> {
         n.setNext(null);
         return nodeToReturn;
 
+    }
+
+
+    /**
+     * Time-complexity O(n)
+     * @param t the value to search for.
+     * @return the node that contains the value, null otherwise.
+     */
+    public Node<T> get(T t) {
+        Node<T> nodeToReturn = null;
+
+        for (Node<T> n = head; n != null; n = n.getNext()) {
+            if (n.getItem().equals(t)) {
+                nodeToReturn = n;
+                break;
+            }
+        }
+        return nodeToReturn;
+    }
+
+
+    /**
+     * Time-complexity O(n)
+     */
+    public void traverse() {
+        for (Node<T> n = head; n != null; n = n.getNext()) {
+            System.out.println(n.getItem());
+        }
+    }
+
+    public boolean isEmpty() {
+        return head == null;
+    }
+
+    public int size() {
+        int counter = 0;
+
+        for (Node<T> n = head; n != null; n = n.getNext()) {
+            counter++;
+        }
+        return counter;
     }
 }

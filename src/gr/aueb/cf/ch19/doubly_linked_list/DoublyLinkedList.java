@@ -78,13 +78,31 @@ public class DoublyLinkedList<T> {
         Node<T> nodeToReturn = null;
 
         for (Node<T> n = head; n != null; n = n.getNext()) {
-            if (n.getNext().equals(t)) {
+            if (n.getItem().equals(t)) {
                 nodeToReturn = n;
                 break;
             }
         }
         return nodeToReturn;
      }
+
+    /**
+     * Time-complexity O(n)
+     */
+    public void traverse() {
+        for (Node<T> n = head; n != null; n = n.getNext()) {
+            System.out.println(n.getItem());
+        }
+    }
+
+    /**
+     * Time-complexity O(n)
+     */
+    public void traverseReverse() {
+        for (Node<T> n = tail; n != null; n = n.getPrev()) {
+            System.out.println(n.getItem());
+        }
+    }
 
     public boolean isEmpty() {
         return head == null;

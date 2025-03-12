@@ -4,6 +4,10 @@ import java.util.Deque;
 import java.util.LinkedList;
 import java.util.function.Consumer;
 
+
+/**
+ * LIFO impl with Deque.
+ */
 public class MyStack<T> {
 
     private final Deque<T> myStack = new LinkedList<>();

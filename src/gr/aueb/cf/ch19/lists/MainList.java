@@ -51,7 +51,7 @@ public class MainList {
         while (iter.hasNext()) {
             String city = iter.next();
             if (city.equals("NY")) {
-                it.remove();
+                iter.remove();
                 //cities.remove(city);            // Exception
             }
         }

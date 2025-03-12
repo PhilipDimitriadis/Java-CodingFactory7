@@ -9,7 +9,6 @@ public class MyStack<T> {
     private final Deque<T> myStack = new LinkedList<>();
 
     public MyStack() {
-
     }
 
     public Deque<T> getMyStack() {

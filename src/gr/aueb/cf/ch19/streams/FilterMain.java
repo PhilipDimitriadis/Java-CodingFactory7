@@ -23,5 +23,13 @@ public class FilterMain {
         Set<String> uniqueCityNames = cities.stream().collect(Collectors.toSet());
 //      Set<String> uniqueCityNames = new HashSet<>(cities);
         uniqueCityNames.forEach(System.out::println);
+
+        String strCities = cities.stream()
+                .collect(Collectors.joining(", "));
+
+//        var strCities = String.join(", ", cities);
+        System.out.println(strCities);
+
+
     }
 }

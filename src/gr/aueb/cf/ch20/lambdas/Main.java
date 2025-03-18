@@ -16,6 +16,15 @@ public class Main {
 
         List<Teacher> teachers1 = getFilteredTeacher(teachers, teacher -> teacher.getId() <= 2);
         teachers1.forEach(System.out::println);
+
+        printTeacher(teachers, teacher -> teacher.printInstanceTeacher());
+        printTeacher(teachers, Teacher::printInstanceTeacher);
+
+        printTeacher(teachers, teacher -> Teacher.printStaticTeacher(teacher));
+        printTeacher(teachers, Teacher::printStaticTeacher);
+
+        printTeacher(teachers, teacher -> System.out.println(teacher));
+        printTeacher(teachers, System.out::println);
     }
 
 //    public static List<Teacher> getFilteredTeacher(List<Teacher> teachers, ITeacherFilter filter) {
